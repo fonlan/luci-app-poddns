@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ "$ACTION" = ifup -o "$ACTION" = ifupdate ] || exit 0
+enable=$(uci -q get poddns.config.enable)
+iface=$(uci -q get poddns.domain.iface)
+if [ $enable = 1 -a $DEVICE = $iface ]; then
+	logger -t poddns "$ACTION of $INTERFACE ($DEVICE), target device $iface"
+	/usr/share/poddns/poddns.sh
+fi
