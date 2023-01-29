@@ -2,14 +2,14 @@ require("luci.sys")
 
 m = Map("poddns", translate("PoDdns"), translate("Simple Dnspod-CN DDNS client, only support IPv4."))
 
-s = m:section(TypedSection, "poddns", "Common")
+s = m:section(TypedSection, "poddns", translate("Common"))
 s.addremove = false
 s.anonymous = true
 
 enable = s:option(Flag, "enable", translate("Enable"))
 token = s:option(Value, "token", translate("Token"))
 
-s = m:section(TypedSection, "domain", "Domain")
+s = m:section(TypedSection, "domain", translate("Domain"))
 s.addremove = false
 s.anonymous = true
 
