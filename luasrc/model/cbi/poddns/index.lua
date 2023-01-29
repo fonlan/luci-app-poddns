@@ -1,6 +1,6 @@
 require("luci.sys")
 
-m = Map("ddns", translate("PoDdns"), translate("Simple Dnspod-CN DDNS client, only support IPv4."))
+m = Map("poddns", translate("PoDdns"), translate("Simple Dnspod-CN DDNS client, only support IPv4."))
 
 s = m:section(TypedSection, "poddns", "Common")
 s.addremove = false
