@@ -24,9 +24,3 @@ msgstr "子域名"
 
 msgid "Main Domain"
 msgstr "主域名"
-
-msgid "TTL"
-msgstr "生存时间"
-
-msgid "Unit: second"
-msgstr "单位：秒"
