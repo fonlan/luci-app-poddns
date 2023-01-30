@@ -13,7 +13,7 @@ s = m:section(TypedSection, "domain", translate("Domain Setting"))
 s.addremove = false
 s.anonymous = true
 
-iface = s:option(Value, "iface", translate("Interface"))
+iface = s:option(Value, "iface", translate("WAN Device"))
 sub_domain = s:option(Value, "sub_domain", translate("Sub Domain"))
 main_domain = s:option(Value, "main_domain", translate("Main Domain"))
 
