@@ -1,2 +1,2 @@
 # luci-app-poddns
-Simple Dnspod-CN DDNS clint for Openwrt, only support IPv4.
+Simple Dnspod-CN DDNS client for Openwrt, only support IPv4.
