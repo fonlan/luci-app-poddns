@@ -16,9 +16,6 @@ msgstr "完整的登录令牌（ID,Token）形如 xxxxx,xxxxxxxxxxxxxxxxxxxxxxxx
 msgid "Domain Setting"
 msgstr "域名设置"
 
-msgid "WAN Device"
-msgstr "WAN设备"
-
 msgid "Sub Domain"
 msgstr "子域名"
 

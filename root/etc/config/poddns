@@ -4,6 +4,5 @@ config poddns 'config'
 	option token ''
 
 config domain 'domain'
-	option iface 'pppoe-wan'
 	option sub_domain ''
 	option main_domain ''
