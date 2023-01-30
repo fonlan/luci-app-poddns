@@ -1,13 +1,10 @@
 
 config poddns 'config'
 	option enable '0'
-	option token 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+	option token ''
 
 config domain 'domain'
 	option iface 'pppoe-wan'
-	option record_line '默认'
 	option sub_domain ''
 	option main_domain ''
-	option domain_id ''
-	option record_id ''
-
+	option ttl '600'
