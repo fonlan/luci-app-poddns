@@ -9,6 +9,12 @@ s.anonymous = true
 enable = s:option(Flag, "enable", translate("Enable"))
 token = s:option(Value, "token", translate("Token"), translate("Full API token(ID,Token) like xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"))
 
+b = s:option(Button, "update", translate("Manual Update"))
+b.inputtitle = translate("Update")
+function b.write(self, section, value)
+    luci.sys.call("/usr/share/poddns/poddns.sh")
+end
+
 s = m:section(TypedSection, "domain", translate("Domain Setting"))
 s.addremove = false
 s.anonymous = true
