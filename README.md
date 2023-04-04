@@ -5,4 +5,4 @@ A very simple Dnspod-CN DDNS client for Openwrt, only support IPv4.
 * No background process. Only update DDNS when wan interface up.
 
 # Screenshot
-![image](https://user-images.githubusercontent.com/7898348/215645863-b5c844b7-17a8-4cf2-9816-44b1dac11455.png)
+![图片](https://user-images.githubusercontent.com/7898348/229738916-42b405bf-ea8a-4b6e-95bd-41e594548188.png)
