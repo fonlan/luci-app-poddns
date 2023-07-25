@@ -22,4 +22,8 @@ s.anonymous = true
 sub_domain = s:option(Value, "sub_domain", translate("Sub Domain"))
 main_domain = s:option(Value, "main_domain", translate("Main Domain"))
 
+m.on_after_commit = function(self)
+    luci.sys.call("/etc/init.d/poddns restart")
+end
+
 return m
