@@ -15,5 +15,6 @@ restart() {
     (crontab -l 2>/dev/null | sed '/poddns/d') | crontab -
     if [ $(uci -q get poddns.config.enable) = 1 ]; then
         (crontab -l 2>/dev/null; echo "* */5 * * * /usr/share/poddns/check.sh") | crontab -
+        /usr/share/poddns/check.sh
     fi
 }
