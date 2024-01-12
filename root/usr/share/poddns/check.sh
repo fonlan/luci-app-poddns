@@ -8,5 +8,5 @@ main_domain=$(uci -q get poddns.domain.main_domain)
 ddns_ip=$(curl -4 -s -X POST https://dnsapi.cn/Record.List -d "login_token=$token&domain=$main_domain&sub_domain=$sub_domain&format=json" | jsonfilter -e "@.records[0].value")
 if [ "$wan_ip" != "$ddns_ip" ]; then
     logger -t poddns "WAN IP $wan_ip mismatch with DDNS IP $ddns_ip. Start update DDNS for $sub_domain.$main_domain"
-    ./poddns.sh
+    /usr/share/poddns/poddns.sh
 fi
