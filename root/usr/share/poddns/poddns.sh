@@ -12,4 +12,6 @@ ddns_ip=$(echo $record | jsonfilter -e "@.value")
 wan_ip=$(ifstatus wan | jsonfilter -e '@["ipv4-address"][0].address')
 if [ "$wan_ip" != "$ddns_ip" ]; then
     curl -4 -X POST https://dnsapi.cn/Record.Ddns -d "login_token=$token&format=json&domain=$main_domain&record_id=$record_id&record_line_id=$line_id&sub_domain=$sub_domain&value=$wan_ip" | jq | logger -t poddns
+else
+    logger -t poddns "WAN IP is not changed, skip update."
 fi
