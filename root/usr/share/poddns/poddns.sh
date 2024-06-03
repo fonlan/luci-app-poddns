@@ -9,7 +9,7 @@ record=$(curl -s -4 -X POST https://dnsapi.cn/Record.List -d "login_token=${toke
 record_id=$(echo ${record} | jq -r ".id")
 line_id=$(echo ${record} | jq -r ".line_id")
 ddns_ip=$(echo ${record} | jq -r ".value")
-wan_ip=$(ifstatus wan | jq -r '["ipv4-address"][0].address')
+wan_ip=$(ifstatus wan | jq -r '.["ipv4-address"][0].address')
 if [[ "${wan_ip}" != "${ddns_ip}" ]]; then
     curl -4 -X POST https://dnsapi.cn/Record.Ddns -d "login_token=${token}&format=json&domain=${main_domain}&record_id=${record_id}&record_line_id=${line_id}&sub_domain=${sub_domain}&value=${wan_ip}" | jq | logger -t poddns
 else
